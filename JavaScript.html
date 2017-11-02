@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<HTML>
+	<HEAD>
+		<TITLE>Zoznam</TITLE>
+		<META CHARSET="UTF-8">
+		<LINK REL="stylesheet" TYPE="text/css" HREF="formstyle1.css">
+		<SCRIPT TYPE="text/javascript">
+			function showAlert()
+			{
+				var firstName;
+				var lastName;
+				firstName=document.getElementById('firstName').value;
+				lastName=document.getElementById('lastName').value;
+				//alert("Hello "+firstName+" "+lastName+"! You pressed the OK button");
+				document.getElementById('OUTPUT').innerHTML="Hello "+firstName+" "+lastName+"! You pressed the OK button";
+			}
+
+			function deleteOutput()
+			{
+				document.getElementById('OUTPUT').innerHTML="";
+			}
+
+			function printMessage()
+			{
+				document.getElementById('MESSAGE').innerHTML="Click on me";
+			}
+
+			function removeMessage()
+			{
+				document.getElementById('MESSAGE').innerHTML="";
+			}
+		</SCRIPT>
+	</HEAD>
+
+	<BODY>
+		<FORM>
+		<TABLE BORDER="2" ALIGN="CENTER">
+			<TR>
+				<TD>Meno:</TD>
+				<TD><INPUT TYPE="TEXT" NAME="firstName" ID="firstName" VALUE="Edgar"></TD>
+			</TR>
+
+			<TR>
+				<TD>Priezvisko:</TD>
+				<TD><INPUT TYPE="TEXT" NAME="lastName" ID="lastName" VALUE="Koterle"></TD>
+			</TR>
+
+			<TR>
+				
+				<TD><DIV ALIGN="CENTER"><INPUT TYPE="RESET" VALUE="Reset to defaults" ONCLICK="deleteOutput()"></DIV></TD>
+				<TD><DIV ALIGN="CENTER"><INPUT TYPE="BUTTON" VALUE="OK" ONCLICK="showAlert()" ONMOUSEOVER="printMessage()" ONMOUSEOUT="removeMessage()"></DIV></TD>
+			</TR>
+		</TABLE>
+	</FORM>
+
+	<DIV ID="OUTPUT"></DIV>
+	<DIV ID="MESSAGE"></DIV>
+
+	</BODY>
+</HTML>
