@@ -203,4 +203,6 @@ int main ()
 
 	for (i=1; i<20; i++)
 		printf("Name: %s, salary: %f\n", student[i].name, student[i].salary);
+		
+	return 0;
 }
